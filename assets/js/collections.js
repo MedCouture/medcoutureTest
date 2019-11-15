@@ -1797,7 +1797,7 @@ $(document).ready(function () {
                                             data-item-id="${styles[i].style}"
                                             data-item-name="${styles[i].name}"
                                             data-item-price="40.00"
-                                            data-item-url="http://127.0.0.1:5500/collections/items/${styles[i].style}.html"
+                                            data-item-url="https:onaseer87.github.io/collections/items/${styles[i].style}.html"
                                             data-item-description="${styles[i].description}"
                                             >Add to Cart</button>
                                         </div>
