@@ -17,21 +17,84 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-    <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="ZmY5ZjlmZTUtMTc5My00YzUyLWE1ODQtN2Y2ZDFiNDc1NjhmNjM3MDE0NzY4Njg0NjI4ODM4"></script>
-    <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyA14gkQW25noui4pNEsK9BJS40KTrlC-mg",
+        authDomain: "medcouturesignups.firebaseapp.com",
+        databaseURL: "https://medcouturesignups.firebaseio.com",
+        projectId: "medcouturesignups",
+        storageBucket: "medcouturesignups.appspot.com",
+        messagingSenderId: "113657167755",
+        appId: "1:113657167755:web:ca1cf80c21e9ac2be9398e",
+        measurementId: "G-5931PR1QBH"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
 </head>
 <body>
-    <div id="testimonials" class="carousel slide" data-ride="carousel">
 
-      </div>
-      <div class="col-md-12 mt-3 d-flex justify-content-center">
-        <button class="snipcart-add-item"
-        data-item-id="9652"
-        data-item-name="TAILORED EMPIRE MID LENGTH LAB COAT"
-        data-item-price="40.00"
-        data-item-url="https://onaseer87.github.io/medcoutureTest/test.html"
-        data-item-description="Meticulously tailored, this lab coat will keep you looking sharp. With anti-microbial and stain-resistant herringbone fabric, you'll want to live in this white lab coat."
-        >Add to Cart</button>
-    </div>  
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="email-signup" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="wearMedcouture" name="wearMedcouture">
+          <label class="form-check-label" for="wearMedcouture">I want to wear Medcouture</label>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="sellMedcouture" name="sellMedcouture">
+          <label class="form-check-label" for="sellMedcouture">I want to sell Medcouture</label>
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+<script>
+
+    $('#submit').on('click', createObject)
+
+        function createObject(e) {
+            e.preventDefault();
+            var signup = [];
+            var email = $('#email-signup').val().trim();
+            var wearMedcouture = $('#wearMedcouture')
+            var sellMedcouture = $('#sellMedcouture')
+
+            if (wearMedcouture.is(':checked')) {
+                wearMedcouture = 'YES';
+            } else {
+                wearMedcouture = 'NO';
+            };
+
+            if (sellMedcouture.is(':checked')) {
+                sellMedcouture = 'YES';
+            } else {
+                sellMedcouture = 'NO';
+            };
+
+            var Obj = {
+                email: email,
+                wearMedcouture: wearMedcouture,
+                sellMedcouture: sellMedcouture
+            }
+
+            signup.push(Obj);
+            console.log(signup);
+        }
+
+
+
+</script>
 </body>
 </html>
