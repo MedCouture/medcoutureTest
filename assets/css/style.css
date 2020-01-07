@@ -74,6 +74,7 @@ html,body{
     background: url('../images/medcouture-givingback.png');
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 30rem;
 }
 #peaches {
     background: url('../images/spring2020/peaches_bg.png');
