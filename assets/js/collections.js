@@ -1638,7 +1638,7 @@ $(document).ready(function () {
             }
         },
         {
-            style: '8564govb',
+            style: '8564GOVB',
             name: 'GOOD VIBES',
             collection: 'prints',
             description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
@@ -1667,7 +1667,7 @@ $(document).ready(function () {
             },
         },
         {
-            style: '8564piwh',
+            style: '8564PIWH',
             name: 'PINWHEEL',
             collection: 'prints',
             description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
@@ -1725,7 +1725,7 @@ $(document).ready(function () {
             },
         },
         {
-            style: '8564wifl',
+            style: '8564WIFL',
             name: 'WIMSICAL FLORAL',
             collection: 'prints',
             description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
@@ -1754,7 +1754,7 @@ $(document).ready(function () {
             },
         },
         {
-            style: '8564ftfl',
+            style: '8564FTFL',
             name: 'FLUTTERFLIES',
             collection: 'prints',
             description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
@@ -1783,7 +1783,7 @@ $(document).ready(function () {
             },
         },
         {
-            style: '8564peak',
+            style: '8564PEAK',
             name: 'PEACOCK',
             collection: 'prints',
             description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
@@ -1812,7 +1812,7 @@ $(document).ready(function () {
             },
         },
         {
-            style: '8564tide',
+            style: '8564TIDE',
             name: 'TIEDYE',
             collection: 'prints',
             description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
@@ -1841,7 +1841,7 @@ $(document).ready(function () {
             },
         },
         {
-            style: '8564dand',
+            style: '8564DAND',
             name: 'DANDELION',
             collection: 'prints',
             description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
