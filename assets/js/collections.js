@@ -13,13 +13,67 @@ $(document).ready(function () {
 
     let styles = [
         {
+            style: 8434,
+            name: 'DOUBLE V NECK TOP',
+            collection: 'peaches',
+            description: 'This sporty scrub top is so cool! It is loaded with personality with a "V" in front and the back. It also has geometric seam details that are genuinely original.',
+            kind: 'solids',
+            features: ['Double v-neck', 'Geometric seam details', 'Two angled welt pockets', 'R: XS-3X (27 1/4”)'],
+            swatches: ['ROYL', 'PWTR','PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
+            isActive: true,
+            appendSwatches: function () {
+                for (let i = 0; i < this.swatches.length; i++) {
+                    let swatches = this.swatches[i];
+                    $('#swatches').append(`
+                        <button class='${swatches} ml-2 swatches' data-color='${swatches}'></button>
+                    `)
+                }
+            },
+            listFeatures: function () {
+                console.log(this.features)
+                for (let i = 0; i < this.features.length; i++) {
+                    let feature = this.features[i];
+                    $('#features').append(
+                        `<li>${feature}</li>`
+                    )
+                }
+            }
+        },
+        {
+            style: 8706,
+            name: 'FLAT FRONT PANT',
+            collection: 'peaches',
+            description: 'You will love the fit of these flat front pants. They have a simple structure and are fun to wear. You will want to wear them every day!',
+            kind: 'bottoms',
+            features: ['Straight leg ', 'Two back pockets','Soft Elastic waistband','Outer waist ties', 'R: XS-5X (30”) P XS-2X (28”) T: XS-XL (32 1/2”)'],
+            swatches: ['ROYL', 'PWTR','PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
+            isActive: true,
+            appendSwatches: function () {
+                for (let i = 0; i < this.swatches.length; i++) {
+                    let swatches = this.swatches[i];
+                    $('#swatches').append(`
+                        <button class='${swatches} ml-2 swatches' data-color='${swatches}'></button>
+                    `)
+                }
+            },
+            listFeatures: function () {
+                console.log(this.features)
+                for (let i = 0; i < this.features.length; i++) {
+                    let feature = this.features[i];
+                    $('#features').append(
+                        `<li>${feature}</li>`
+                    )
+                }
+            }
+        },
+        {
             style: 8407,
             name: 'Zip Neck Top',
             collection: 'peaches',
             description: 'This visionary henley neck scrub top features a sleek zipper neckline, relaxed silhouette, and available in basic and fashion colors.',
             kind: 'solids',
             features: ['Henley Neck', 'Chic Zipper', 'Two chest patch pockets', 'R: XS-3X (27”)'],
-            swatches: ['ROYL', 'PWTR', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
+            swatches: ['ROYL', 'PWTR', 'PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -46,7 +100,7 @@ $(document).ready(function () {
             description: 'These dreamy scrub pants feature a playful waist detail, sleek silhouette, four pockets, and outer ties at the waist.',
             kind: 'bottoms',
             features: ['Straight leg ', 'Decorative waistband', 'Outter waist ties', 'Single cargo pocket', 'R: XS-5X (30.5”) P XS-2X (28.5”) T: XS-XL (33”)'],
-            swatches: ['ROYL', 'PWTR', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
+            swatches: ['ROYL', 'PWTR', 'PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -73,7 +127,7 @@ $(document).ready(function () {
             description: 'Med Couture has gone super sporty with this minimalistic V-neck top. Beautiful rib knit accents punctuate a flattering silhouette.',
             kind: 'solids',
             features: ['Classic V neck', 'Two large welt pockets', 'Rib-knit detail', 'Side snap embellishment', 'R: XS-5X (26.5”)'],
-            swatches: ['ROYL', 'PWTR', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
+            swatches: ['ROYL', 'PWTR', 'PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -100,7 +154,7 @@ $(document).ready(function () {
             description: 'Level up your scrub game with these sleek joggers. An elastic waistband with an outer drawcord lets you adjust the fit. The elastic cuffs feel comfortable and relaxed.',
             kind: 'bottoms',
             features: ['Adjustable front waist ties', 'Two cargo pockets', 'Jersey waistband and ankle cuffs', 'R: XS-3X (28.5”) P: XS-XL (26.5”) T: XS-XL (31”)'],
-            swatches: ['ROYL', 'PWTR', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
+            swatches: ['ROYL', 'PWTR', 'PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -127,7 +181,7 @@ $(document).ready(function () {
             description: 'Med Couture truly channeled up awesomeness with this henley scrub top. You’ll rock this relaxed fit style in comfort all day long. You can tuck it in or leave it out!',
             kind: 'solids',
             features: ['Henley neck', 'Chest patch pocket', 'Back yoke with box pleat', 'Inside contrast neckband', 'R: XS-2X (26”)'],
-            swatches: ['BLAC', 'BLUH', 'NAVY', 'SLAT'],
+            swatches: ['BLAC', 'BLUH', 'INDH', 'NAVY', 'SLAT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -154,7 +208,7 @@ $(document).ready(function () {
             description: 'Simple in design, this strait leg scrub pant has rib-knit accents at the waistband and pockets. The fabric and fit are unbelievably comfortable.',
             kind: 'bottoms',
             features: ['Straight leg with side vents', 'Rib knit waist and pocket lining', '1 cargo pocket', 'Two back patch pockets', 'R: XS-3X (31”) P XS-XL (29”) T XS-XL (33”)'],
-            swatches: ['BLAC', 'BLUH', 'NAVY', 'ROYL', 'SLAT'],
+            swatches: ['BLAC', 'BLUH', 'INDH', 'NAVY', 'ROYL', 'SLAT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -181,7 +235,7 @@ $(document).ready(function () {
             description: "You'll love this mock wrap scrub top. With a relaxed silhouette, this v-neck top has large pockets, an accessory loop, and princess seams in the back.",
             kind: 'solids',
             features: ['Mock wrap v-neckline', 'Double-layered angled pockets', 'Accessory loop', 'Inside contrast neckband', 'Back princess seams', 'R: XS-3X (26”)'],
-            swatches: ['BLAC', 'BLUH', 'CEIL', 'GLXY', 'GRAP', 'NAVY', 'OLIV', 'PKPH', 'PWTR', 'ROYL', 'SLAT', 'WINE'],
+            swatches: ['BLAC', 'BLUH', 'INDH', 'CEIL', 'GLXY', 'GRAP', 'NAVY', 'OLIV', 'PKPH', 'PWTR', 'ROYL', 'SLAT', 'WINE'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -208,7 +262,7 @@ $(document).ready(function () {
             description: "Med Couture jogger pants elevate a closet staple with an extra comfortable feel. Made from a poly blend that feels like cotton, they feature rib knit waistband and ankle cuffs.",
             kind: 'bottoms',
             features: ['Single cargo pocket', 'Rib knit waistband and ankle cuffs', 'Adjustable front waist ties', 'Accessory loop', 'Two back patch pockets', 'R: XS-3X (28 1/2”) P XS-XL (26 1/2”) T XS-XL (31”)'],
-            swatches: ['BLAC', 'BLUH', 'CEIL', 'GLXY', 'GRAP', 'NAVY', 'OLIV', 'PKPH', 'PWTR', 'ROYL', 'SLAT', 'WINE', 'WHIT'],
+            swatches: ['BLAC', 'BLUH', 'INDH', 'CEIL', 'GLXY', 'GRAP', 'NAVY', 'OLIV', 'PKPH', 'PWTR', 'ROYL', 'SLAT', 'WINE', 'WHIT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -235,7 +289,7 @@ $(document).ready(function () {
             description: "This classic is an industry favorite. It’s practical v-neck design and perfectly proportioned knit side panels bring style to your everyday wardrobe.",
             kind: 'solids',
             features: ['Overlapping rib knit side panels', 'Accessory loop', 'Extra accessory pocket and pen slot', 'Two large patch pockets', 'Two back patch pockets', ' Inside contrast neckband', 'R: XS-5X (27”)'],
-            swatches: ['BLAC', 'BLUH', 'CEIL', 'GLXY', 'GRAP', 'NAVY', 'OLIV', 'PKPH', 'PWTR', 'ROYL', 'SLAT', 'WINE', 'WHIT'],
+            swatches: ['BLAC', 'BLUH', 'CEIL', 'INDH', 'GLXY', 'GRAP', 'NAVY', 'OLIV', 'PKPH', 'PWTR', 'ROYL', 'SLAT', 'WINE', 'WHIT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -262,7 +316,7 @@ $(document).ready(function () {
             description: "These lightweight strait leg scrub pants have a comfy wide waistband with internal ties. Designed for a clean, smooth fit with exceptional comfort.",
             kind: 'bottoms',
             features: ['Straight leg with side vents', 'Jacquard elastic and rib knit waistband', 'Internal waist ties', 'Two cargo, two back patch ', 'Two back patch pockets', 'Extra accessory pocket', 'Accessory loop', 'R: XS-5X (31”) P XS-2X (29”) T XS-XL (33”)'],
-            swatches: ['BLAC', 'BLUH', 'CEIL', 'GLXY', 'GRAP', 'NAVY', 'OLIV', 'PKPH', 'PWTR', 'ROYL', 'SLAT', 'WINE'],
+            swatches: ['BLAC', 'BLUH', 'CEIL', 'INDH', 'GLXY', 'GRAP', 'NAVY', 'OLIV', 'PKPH', 'PWTR', 'ROYL', 'SLAT', 'WINE'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -343,7 +397,7 @@ $(document).ready(function () {
             description: "This scrub top offers you a comfy and breathable fit. A v-neckline and a fun racerback design make for a classic sporty look.",
             kind: 'solids',
             features: ['Racerback knit panel', 'Front and back princess seams', 'Two large patch pockets', 'Welt accessory pocket', 'R: XS-5X (front 27” back 26”)'],
-            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM', 'PWTR', 'REDD', 'ROYL', 'TEAL', 'TURQ', 'WINE', 'WHIT'],
+            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM','PWNK', 'PWTR', 'REDD', 'ROYL', 'SAFR', 'TEAL','TFPK', 'TURQ', 'WINE', 'WHIT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -372,7 +426,7 @@ $(document).ready(function () {
             description: "Designed for comfort and built to perform on the job and beyond! This yoga style scrub pant offers a comfortable drawstring waistband and two cargo pockets.",
             kind: 'bottoms',
             features: ['Boot cut leg with side vents', 'Sporty yoga knit waistband', 'Internal waist ties', 'Two welt cargo pockets', 'Two back patch pockets', 'R: XS-5X (31”) | P: XS-2X (29”) | T: XS-2X (33”)'],
-            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM', 'PWTR', 'REDD', 'ROYL', 'TEAL', 'TURQ', 'WINE', 'WHIT'],
+            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM', 'PWNK', 'PWTR', 'REDD', 'ROYL','SAFR', 'TEAL', 'TFPK','TURQ', 'WINE', 'WHIT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -401,7 +455,7 @@ $(document).ready(function () {
             description: "This v-neck scrub top feels sporty while exhibiting a traditional appeal. Crafted from a sleek and lightweight fabric, includes a chest pocket for expanded storage.",
             kind: 'solids',
             features: ['Chest patch pocket', 'Two large welt pockets', 'R: XS-3X ( 26”)'],
-            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM', 'PWTR', 'REDD', 'ROYL', 'TEAL', 'TURQ', 'WINE', 'WHIT'],
+            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM','PWNK', 'PWTR', 'REDD', 'ROYL', 'SAFR','TEAL','TFPK', 'TURQ', 'WINE', 'WHIT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -430,7 +484,7 @@ $(document).ready(function () {
             description: 'From fulfilling all your heroic duties to enjoying a relaxing cup of coffee, these straight leg scrub pants are essential for keeping you comfortable during any activity.',
             kind: 'bottoms',
             features: ['Straight leg with side vents', 'Back elastic waistband', 'Adjustable front waist ties', 'Single cargo pocket', 'Single back patch pocket', 'R: XS-3X ( 31”) | P: XS-XL (29”) | T: XS-XL (33”)'],
-            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM', 'PWTR', 'REDD', 'ROYL', 'TEAL', 'TURQ', 'WINE', 'WHIT'],
+            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM', 'PWNK', 'PWTR', 'REDD', 'ROYL', 'SAFR', 'TEAL', 'TFPK', 'TURQ', 'WINE', 'WHIT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -862,7 +916,7 @@ $(document).ready(function () {
             style: 8638,
             name: 'ZIP FRONT WARM UP',
             collection: 'layers',
-            description: 'need description',
+            description: 'This warm up jacket covers all your bases. You’ll be warm and cozy on cold work days and it’s sport zipper ensures easy off and on. ',
             kind: 'layering',
             features: ['95% polyester, 5% spandex', 'Long sleeves with rib knit cuffs', 'Zip front closure', 'Faux kangaroo pouch pockets', 'Front and back princess seams', 'R: XS-3X (27”)'],
             swatches: ['BLAC', 'CEIL', 'GLXY', 'NAVY', 'PWTR', 'ROYL', 'WHIT'],
@@ -891,7 +945,7 @@ $(document).ready(function () {
             style: 8684,
             name: 'PERFORMANCE FLEECE JACKET',
             collection: 'layers',
-            description: '',
+            description: 'This cozy over scrub jacket is designed to keep you warm on those cold office days. It features hidden inside pockets and a sport-inspired colar.',
             kind: 'outerwear',
             features: ['100% polyester', 'Zipper pull functions as hair tie', 'Two front in-seam welt pockets', 'Two hidden inside pockets', 'Back logo reflector', 'R: XS-3X (26”)'],
             swatches: ['BLAC', 'CEIL', 'KHAK', 'NAVY', 'OLIV', 'PKPH', 'PWTR', 'ROYL', 'WHIT', 'WINE'],
@@ -920,7 +974,7 @@ $(document).ready(function () {
             style: 7663,
             name: 'ZIP FRONT WARM UP',
             collection: 'layers',
-            description: '',
+            description: 'Our sporty zip front warm-up jacket is warm and comfortable. With large curved pockets and soft knit cuffs, this jacket transforms from office wear to activewear!',
             kind: 'layering',
             features: ['77% polyester, 20% rayon 3% spandex', 'Rib knit collar and cuffs', 'Large curved pockets', 'Angled shoulder yoke seams', 'Back princess seams and yoke', 'R: XS-3X (28”)'],
             swatches: ['BLAC', 'NAVY', 'OLIV', 'PWTR'],
@@ -949,7 +1003,7 @@ $(document).ready(function () {
             style: 8687,
             name: 'ZIP FRONT WARM UP',
             collection: 'layers',
-            description: '',
+            description: 'Resist the cold in this warm-up jacket. Designed with function in mind, it has four pockets and a smooth zipper. You’ll stay seriously warm in comfort.',
             kind: 'layering',
             features: ['55% cotton, 42% polyester,3% spandex', 'Two large patch pockets', 'Hidden side seam pockets', 'Zip front closure', 'R: XS-3X (27”)'],
             swatches: ['BLAC', 'NAVY'],
@@ -978,7 +1032,7 @@ $(document).ready(function () {
             style: 8690,
             name: 'PERFORMANCE FLEECE VEST',
             collection: 'layers',
-            description: '',
+            description: 'Perfect for fluctuating temperature, this vest flaunts the warmth of bonded fleece yet provides the freedom to move.',
             kind: 'layering',
             features: ['100% polyester', 'Zipper pull functions as hair tie', 'Two front in-seam welt pockets', 'Two hidden inside pockets', 'Back logo reflector', 'R: XS-3X (24”)'],
             swatches: ['BLAC', 'NAVY', 'ROYL', 'WHIT'],
@@ -1584,6 +1638,238 @@ $(document).ready(function () {
             }
         },
         {
+            style: '8564govb',
+            name: 'GOOD VIBES',
+            collection: 'prints',
+            description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
+            kind: 'prints',
+            features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-5X ( 26”)'],
+            swatches: ['BLAC', 'PKPH', 'WHIT'],
+            isActive: true,
+            listFeatures: function () {
+                console.log(this.features)
+                for (let i = 0; i < this.features.length; i++) {
+                    let feature = this.features[i];
+                    $('#features').append(
+                        `<li>${feature}</li>`
+                    )
+                }
+            },
+            appendSwatches: function () {
+                for (let i = 0; i < this.swatches.length; i++) {
+                    let swatches = this.swatches[i];
+                    $('#swatches').append(`
+
+                        <button class='${swatches} ml-2' data-color='${swatches}'></button>
+
+                    `)
+                }
+            },
+        },
+        {
+            style: '8564piwh',
+            name: 'PINWHEEL',
+            collection: 'prints',
+            description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
+            kind: 'prints',
+            features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-5X ( 26”)'],
+            swatches: ['BLAC', 'WHIT'],
+            isActive: true,
+            listFeatures: function () {
+                console.log(this.features)
+                for (let i = 0; i < this.features.length; i++) {
+                    let feature = this.features[i];
+                    $('#features').append(
+                        `<li>${feature}</li>`
+                    )
+                }
+            },
+            appendSwatches: function () {
+                for (let i = 0; i < this.swatches.length; i++) {
+                    let swatches = this.swatches[i];
+                    $('#swatches').append(`
+
+                        <button class='${swatches} ml-2' data-color='${swatches}'></button>
+
+                    `)
+                }
+            },
+        },
+        {
+            style: '8564PIAP',
+            name: 'PINEAPPLE',
+            collection: 'prints',
+            description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
+            kind: 'prints',
+            features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-5X ( 26”)'],
+            swatches: ['NAVY', 'PKPH'],
+            isActive: true,
+            listFeatures: function () {
+                console.log(this.features)
+                for (let i = 0; i < this.features.length; i++) {
+                    let feature = this.features[i];
+                    $('#features').append(
+                        `<li>${feature}</li>`
+                    )
+                }
+            },
+            appendSwatches: function () {
+                for (let i = 0; i < this.swatches.length; i++) {
+                    let swatches = this.swatches[i];
+                    $('#swatches').append(`
+
+                        <button class='${swatches} ml-2' data-color='${swatches}'></button>
+
+                    `)
+                }
+            },
+        },
+        {
+            style: '8564wifl',
+            name: 'WIMSICAL FLORAL',
+            collection: 'prints',
+            description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
+            kind: 'prints',
+            features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
+            swatches: ['NAVY','PKPH'],
+            isActive: true,
+            listFeatures: function () {
+                console.log(this.features)
+                for (let i = 0; i < this.features.length; i++) {
+                    let feature = this.features[i];
+                    $('#features').append(
+                        `<li>${feature}</li>`
+                    )
+                }
+            },
+            appendSwatches: function () {
+                for (let i = 0; i < this.swatches.length; i++) {
+                    let swatches = this.swatches[i];
+                    $('#swatches').append(`
+
+                        <button class='${swatches} ml-2' data-color='${swatches}'></button>
+
+                    `)
+                }
+            },
+        },
+        {
+            style: '8564ftfl',
+            name: 'FLUTTERFLIES',
+            collection: 'prints',
+            description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
+            kind: 'prints',
+            features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
+            swatches: ['NAVY', 'PKPH', 'SAFR'],
+            isActive: true,
+            listFeatures: function () {
+                console.log(this.features)
+                for (let i = 0; i < this.features.length; i++) {
+                    let feature = this.features[i];
+                    $('#features').append(
+                        `<li>${feature}</li>`
+                    )
+                }
+            },
+            appendSwatches: function () {
+                for (let i = 0; i < this.swatches.length; i++) {
+                    let swatches = this.swatches[i];
+                    $('#swatches').append(`
+
+                        <button class='${swatches} ml-2' data-color='${swatches}'></button>
+
+                    `)
+                }
+            },
+        },
+        {
+            style: '8564peak',
+            name: 'PEACOCK',
+            collection: 'prints',
+            description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
+            kind: 'prints',
+            features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
+            swatches: ['RLTL', 'ROYL','NAVY'],
+            isActive: true,
+            listFeatures: function () {
+                console.log(this.features)
+                for (let i = 0; i < this.features.length; i++) {
+                    let feature = this.features[i];
+                    $('#features').append(
+                        `<li>${feature}</li>`
+                    )
+                }
+            },
+            appendSwatches: function () {
+                for (let i = 0; i < this.swatches.length; i++) {
+                    let swatches = this.swatches[i];
+                    $('#swatches').append(`
+
+                        <button class='${swatches} ml-2' data-color='${swatches}'></button>
+
+                    `)
+                }
+            },
+        },
+        {
+            style: '8564tide',
+            name: 'TIEDYE',
+            collection: 'prints',
+            description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
+            kind: 'prints',
+            features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
+            swatches: ['CARI', 'PKPH', 'ROYL'],
+            isActive: true,
+            listFeatures: function () {
+                console.log(this.features)
+                for (let i = 0; i < this.features.length; i++) {
+                    let feature = this.features[i];
+                    $('#features').append(
+                        `<li>${feature}</li>`
+                    )
+                }
+            },
+            appendSwatches: function () {
+                for (let i = 0; i < this.swatches.length; i++) {
+                    let swatches = this.swatches[i];
+                    $('#swatches').append(`
+
+                        <button class='${swatches} ml-2' data-color='${swatches}'></button>
+
+                    `)
+                }
+            },
+        },
+        {
+            style: '8564dand',
+            name: 'DANDELION',
+            collection: 'prints',
+            description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
+            kind: 'prints',
+            features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-5X ( 26”)'],
+            swatches: ['GLXY', 'NAVY', 'RLTL'],
+            isActive: true,
+            listFeatures: function () {
+                console.log(this.features)
+                for (let i = 0; i < this.features.length; i++) {
+                    let feature = this.features[i];
+                    $('#features').append(
+                        `<li>${feature}</li>`
+                    )
+                }
+            },
+            appendSwatches: function () {
+                for (let i = 0; i < this.swatches.length; i++) {
+                    let swatches = this.swatches[i];
+                    $('#swatches').append(`
+
+                        <button class='${swatches} ml-2' data-color='${swatches}'></button>
+
+                    `)
+                }
+            },
+        },
+        {
             style: '8564gafl',
             name: 'GARDEN FLORAL',
             collection: 'prints',
@@ -1591,7 +1877,7 @@ $(document).ready(function () {
             kind: 'prints',
             features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
             swatches: ['BLAC', 'NAVY', 'ROYL'],
-            isActive: true,
+            isActive: false,
             listFeatures: function () {
                 console.log(this.features)
                 for (let i = 0; i < this.features.length; i++) {
@@ -1736,7 +2022,7 @@ $(document).ready(function () {
             kind: 'prints',
             features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
             swatches: ['BLAC', 'CEIL', 'NAVY'],
-            isActive: true,
+            isActive: false,
             listFeatures: function () {
                 console.log(this.features)
                 for (let i = 0; i < this.features.length; i++) {
@@ -1794,7 +2080,7 @@ $(document).ready(function () {
             kind: 'prints',
             features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
             swatches: ['HNTR', 'NAVY', 'OLIV'],
-            isActive: true,
+            isActive: false,
             listFeatures: function () {
                 console.log(this.features)
                 for (let i = 0; i < this.features.length; i++) {
@@ -1823,7 +2109,7 @@ $(document).ready(function () {
             kind: 'prints',
             features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
             swatches: ['BLAC', 'NAVY', 'PKPH'],
-            isActive: true,
+            isActive: false,
             listFeatures: function () {
                 console.log(this.features)
                 for (let i = 0; i < this.features.length; i++) {
@@ -1910,7 +2196,7 @@ $(document).ready(function () {
             kind: 'prints',
             features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
             swatches: ['GELO', 'NAVY', 'ROYL'],
-            isActive: true,
+            isActive: false,
             listFeatures: function () {
                 console.log(this.features)
                 for (let i = 0; i < this.features.length; i++) {
