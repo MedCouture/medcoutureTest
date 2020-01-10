@@ -23,6 +23,7 @@ $(document).ready(function() {
 
   $('#giving-back').backstretch('assets/images/medcouture-givingback.png');
   $('#splash').backstretch('assets/images/PeachesFeature_2800px.jpg');
+  $('#four-o-four').backstretch('assets/images/404.png');
 
   var controller = new ScrollMagic.Controller();
                 

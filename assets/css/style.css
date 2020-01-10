@@ -676,11 +676,11 @@ hr.white {
 #touch.fade-in {
     opacity: 1;
 }
-#four-o-four {
+/* #four-o-four {
     background: url('../images/404.png');
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 button:focus {
     outline: transparent;
     /* border:0px transparent; */
