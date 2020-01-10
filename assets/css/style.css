@@ -688,7 +688,7 @@ button:focus {
 a:focus {
     outline: transparent;
     border:0px transparent;
-
+}
 /* End Color Swatches */
 
 @media (max-width: 767px) {
