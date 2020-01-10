@@ -681,6 +681,14 @@ hr.white {
     background-repeat: no-repeat;
     background-size: cover;
 }
+button:focus {
+    outline: transparent;
+    /* border:0px transparent; */
+}
+a:focus {
+    outline: transparent;
+    border:0px transparent;
+
 /* End Color Swatches */
 
 @media (max-width: 767px) {
