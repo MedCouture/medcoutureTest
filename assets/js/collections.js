@@ -45,7 +45,7 @@ $(document).ready(function () {
             collection: 'peaches',
             description: 'You will love the fit of these flat front pants. They have a simple structure and are fun to wear. You will want to wear them every day!',
             kind: 'bottoms',
-            features: ['Straight leg ', 'Two back pockets','Soft Elastic waistband','Outer waist ties', 'R: XS-5X (30”) P XS-2X (28”) T: XS-XL (32 1/2”)'],
+            features: ['Straight leg ', 'Two back pockets','Soft Elastic waistband','Outer waist ties', 'R: XS-3X (30”) P XS-2X (28”) T: XS-XL (32 1/2”)'],
             swatches: ['ROYL', 'PWTR','PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
             isActive: true,
             appendSwatches: function () {
@@ -369,7 +369,7 @@ $(document).ready(function () {
             collection: 'touchclassic',
             description: "Touch Classic Needs Description",
             kind: 'bottoms',
-            features: ['Straight leg', 'Super comfortable waistband', 'Outer waist ties', 'Single bakc pocket', 'R: XS-5X (30.5”) P XS-2X (28.5”) T XS-XL (33”)'],
+            features: ['Straight leg', 'Super comfortable waistband', 'Outer waist ties', 'Single back pocket', 'R: XS-5X (30.5”) P XS-2X (28.5”) T XS-XL (33”)'],
             swatches: ['BLAC', 'BLUH', 'INDH','NAVY','PWTR', 'ROYL', 'SLAT'],
             isActive: true,
             appendSwatches: function () {
