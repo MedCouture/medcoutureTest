@@ -19,27 +19,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
-
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
 
     <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyA14gkQW25noui4pNEsK9BJS40KTrlC-mg",
-        authDomain: "medcouturesignups.firebaseapp.com",
-        databaseURL: "https://medcouturesignups.firebaseio.com",
-        projectId: "medcouturesignups",
-        storageBucket: "medcouturesignups.appspot.com",
-        messagingSenderId: "113657167755",
-        appId: "1:113657167755:web:ca1cf80c21e9ac2be9398e",
-        measurementId: "G-5931PR1QBH"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+
     </script>
+    <script src="https://kit.fontawesome.com/81d33ac655.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -57,10 +46,48 @@
           <input type="checkbox" class="form-check-input" id="sellMedcouture" name="sellMedcouture">
           <label class="form-check-label" for="sellMedcouture">I want to sell Medcouture</label>
         </div>
-        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        <button id="submit" type="submit">Submit</button>
       </form>
+      <div id="message"></div>
 
+    <div class="bg-dark">
+        <input id="search" type="search">
+        <input type="submit" id="execute-search" value="&#128269"></input>
+        
+    </div>
+
+    <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+     
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Style Not Found
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+    <script src="assets/js/collections.js"></script>
 <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyA14gkQW25noui4pNEsK9BJS40KTrlC-mg",
+        authDomain: "medcouturesignups.firebaseapp.com",
+        databaseURL: "https://medcouturesignups.firebaseio.com",
+        projectId: "medcouturesignups",
+        storageBucket: "medcouturesignups.appspot.com",
+        messagingSenderId: "113657167755",
+        appId: "1:113657167755:web:ca1cf80c21e9ac2be9398e",
+        measurementId: "G-5931PR1QBH"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
 
     $('#submit').on('click', createObject)
 
@@ -68,8 +95,8 @@
             e.preventDefault();
             var signup = [];
             var email = $('#email-signup').val().trim();
-            var wearMedcouture = $('#wearMedcouture')
-            var sellMedcouture = $('#sellMedcouture')
+            var wearMedcouture = $('#wearMedcouture');
+            var sellMedcouture = $('#sellMedcouture');
 
             if (wearMedcouture.is(':checked')) {
                 wearMedcouture = 'YES';
@@ -90,11 +117,17 @@
             }
 
             signup.push(Obj);
+            var database = firebase.database();
+            database.ref().push(Obj);
             console.log(signup);
+            $('#email-signup').val('');
+            checkboxArr = $('input[type="checkbox"]');
+            for (let i = 0; i < checkboxArr.length; i++) {
+                checkboxArr[i].checked = false
+            }
         }
 
-
-
 </script>
+
 </body>
 </html>

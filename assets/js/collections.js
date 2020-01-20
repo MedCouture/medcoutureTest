@@ -340,7 +340,7 @@ $(document).ready(function () {
             style: 7463,
             name: 'V-NECK 3 POCKET TOP',
             collection: 'touchclassic',
-            description: "Touch Classic Needs Description",
+            description: "This classic scrub top is the perfect blend of classic style and comfort. This poly blend fabric is easy care and feels like cotton! ",
             kind: 'solids',
             features: ['Classic silhouette','Two angled welt pockets','Chest pocket with bungee loop','Contrast back neckband','R: XS-3X (27")'],
             swatches: ['BLAC', 'BLUH', 'INDH','NAVY','PWTR', 'ROYL', 'SLAT'],
@@ -367,7 +367,7 @@ $(document).ready(function () {
             style: 7756,
             name: 'DRAWSTRING PANT',
             collection: 'touchclassic',
-            description: "Touch Classic Needs Description",
+            description: "These scrub pants are the perfect blend of classic style and comfort. You'll love the waistband. Outer waist ties ensure a perfect fit! ",
             kind: 'bottoms',
             features: ['Straight leg', 'Super comfortable waistband', 'Outer waist ties', 'Single back pocket', 'R: XS-5X (30.5”) P XS-2X (28.5”) T XS-XL (33”)'],
             swatches: ['BLAC', 'BLUH', 'INDH','NAVY','PWTR', 'ROYL', 'SLAT'],
@@ -2385,5 +2385,22 @@ $(document).ready(function () {
     }
 
     thumbnailImageChange();
+
+
+    var searchStyle = function (e) {
+        
+        e.preventDefault();
+        let input = $('#search').val().trim().toLowerCase();
+        console.log(input)
+        const found = styles.find(e => e.style.toString() == input)
+        if (found) {
+            window.location.replace(`http://www.medcouture.com/collections/items/${input}.html`)
+        } else {
+            $('#myModal').modal('show')
+        };
+
+    }
+    
+    $('#execute-search').on('click', searchStyle);
 
 })
