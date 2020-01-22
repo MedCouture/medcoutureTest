@@ -2408,27 +2408,33 @@ $(document).ready(function () {
         //on change the user will see the results 
         //results will have index of style # or collection or kind
         let input = $('.search').val().trim().toLowerCase();
-        let stylesResults = styles.filter(e => e.style == input && e.isActive == true);
-        let collectionResults = styles.filter(e => e.collection == input && e.isActive == true);
-        let kindResults = styles.filter(e => e.kind == input && e.isActive == true)
-        let results = [...stylesResults,...collectionResults,...kindResults];
+        let descriptionResults = styles.filter(e => e.isActive === true && e.description.indexOf(input) > -1);
+        let nameResults = styles.filter(e => e.isActive === true && e.name.indexOf(input) > -1);
+        let stylesResults = styles.filter(e => e.isActive === true && e.style.toString().indexOf(input) > -1);
+        let collectionResults = styles.filter(e => e.isActive === true && e.collection.indexOf(input) > -1);
+        let kindResults = styles.filter(e => e.isActive === true && e.kind.indexOf(input) > -1);
+        let results = [...descriptionResults,...nameResults,...stylesResults,...collectionResults,...kindResults];
 
        let $searchResults = $('.search-results');
-        console.log(results);
+        
        if (results.length > 0) {
             $searchResults.css({
                 display:'block',
                 color:'#fff',
-                transition:'all .3s '
+                transition:'all .3s ease-in-out'
             })
        } else {
         $('#modal').modal('show');
        }
 
        $searchResults.empty();
-       for (let i = 0; i < results.length;i++) {
+       for (let i = 0; i < results.length; i++) {
+           if (results[i].style === results[i].style){
+               results.splice(results[i],1)
+           }
+           console.log(results[i]);
            $searchResults.append(
-           `<div class="col-md-3 col-sm-6 p-3 text-sofia text-uppercase">
+           `<div class="col-lg-3 col-sm-6 p-3 text-sofia text-uppercase">
             <a href="https://www.medcouture.com/collections/items/${results[i].style}.html"><img src="https://www.medcouture.com/assets/images/products/products/${results[i].style}.jpg" 
             alt="${results[i].name}" class="img-fluid"></a>
              ${results[i].style} <br> ${results[i].name}
