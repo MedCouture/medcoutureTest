@@ -95,6 +95,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="http://dashboard.medcouture.com">LOGIN</a>
                     </li>
+                    <li>
+                        <form class="d-flex justify-content-center align-items-start ml-2">
+                            <input id="search" type="search" class="text-sofia" placeholder="Search Style #">
+                            <button type="submit" id="execute-search"><i class="fas fa-search"></i></button> 
+                        </form>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -220,7 +226,17 @@
             </div>
         </div>
     </div>
-
+        <!-- The Modal -->
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">       
+                <!-- Modal body -->
+                <div class="modal-body text-center text-sofia">
+                  Style Not Found
+                </div>
+              </div>
+            </div>
+          </div>
     <footer class="container-fluid dark-gray">
         <div class="row">
             <div class="col-6 my-5">
@@ -267,6 +283,7 @@
         </div>
     </footer>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/collections.js"></script>
 </body>
 
 </html>

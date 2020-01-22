@@ -2387,20 +2387,69 @@ $(document).ready(function () {
     thumbnailImageChange();
 
 
-    var searchStyle = function (e) {
+    let searchStyle = function (e) {
         
         e.preventDefault();
         let input = $('#search').val().trim().toLowerCase();
         console.log(input)
         const found = styles.find(e => e.style.toString() == input)
         if (found) {
-            window.location.replace(`http://www.medcouture.com/collections/items/${input}.html`)
+            console.log(found);
+            window.location.replace(`http://www.medcouture.com/collections/items/${found.style}.html`)
         } else {
-            $('#myModal').modal('show')
+            $('#modal').modal('show')
         };
 
     }
-    
-    $('#execute-search').on('click', searchStyle);
+
+    let filterStyle = function (e){
+        e.preventDefault();
+        console.log('i am clicked');
+        //on change the user will see the results 
+        //results will have index of style # or collection or kind
+        let input = $('.search').val().trim().toLowerCase();
+        let stylesResults = styles.filter(e => e.style == input && e.isActive == true);
+        let collectionResults = styles.filter(e => e.collection == input && e.isActive == true);
+        let kindResults = styles.filter(e => e.kind == input && e.isActive == true)
+        let results = [...stylesResults,...collectionResults,...kindResults];
+
+       let $searchResults = $('.search-results');
+        console.log(results);
+       if (results.length > 0) {
+            $searchResults.css({
+                display:'block',
+                color:'#fff',
+                transition:'all .3s '
+            })
+       } else {
+        $('#modal').modal('show');
+       }
+
+       $searchResults.empty();
+       for (let i = 0; i < results.length;i++) {
+           $searchResults.append(
+           `<div class="col-md-3 col-sm-6 p-3 text-sofia text-uppercase">
+            <a href="https://www.medcouture.com/collections/items/${results[i].style}.html"><img src="https://www.medcouture.com/assets/images/products/products/${results[i].style}.jpg" 
+            alt="${results[i].name}" class="img-fluid"></a>
+             ${results[i].style} <br> ${results[i].name}
+            </div>
+           `);
+       }
+    }
+    $('.execute-search').on('click', filterStyle);
+
+    let disableOverlay = function () {
+       let $searchResults = $('.search-results');
+        $searchResults.css({
+            display:'none',
+            color:'#fff',
+            transition:'all .3s '
+        })
+    }
+    $('.overlay').on('click', disableOverlay);
+
+
+
+
 
 })

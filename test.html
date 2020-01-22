@@ -50,24 +50,22 @@
       </form>
       <div id="message"></div>
 
-    <div class="bg-dark">
-        <input id="search" type="search">
-        <input type="submit" id="execute-search" value="&#128269"></input>
-        
-    </div>
 
+      <form>
+        <input class="search" type="search" class="text-sofia" placeholder="Search Style Number">
+        <button type="submit" class="execute-search"><i class="fas fa-search"></i></button> 
+      </form>
+      <div class="bg-dark container">
+        <div class="row search-results"></div>
+      </div>
     <!-- The Modal -->
-  <div class="modal fade" id="myModal">
+  <div class="modal fade" id="modal">
     <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-     
-        
+      <div class="modal-content">       
         <!-- Modal body -->
-        <div class="modal-body">
+        <div class="modal-body text-center text-sofia">
           Style Not Found
         </div>
-        
-        
       </div>
     </div>
   </div>
