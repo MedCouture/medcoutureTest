@@ -2429,10 +2429,9 @@ $(document).ready(function () {
 
        $searchResults.empty();
        for (let i = 0; i < results.length; i++) {
-           if (results[i].style === results[i].style){
-               results.splice(results[i],1)
-           }
-           console.log(results[i]);
+        //    if (results[i].style === results[i].style){
+        //        results.splice(results[i],1)
+        //    }
            $searchResults.append(
            `<div class="col-lg-3 col-sm-6 p-3 text-sofia text-uppercase">
             <a href="https://www.medcouture.com/collections/items/${results[i].style}.html"><img src="https://www.medcouture.com/assets/images/products/products/${results[i].style}.jpg" 
