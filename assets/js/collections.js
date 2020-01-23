@@ -19,7 +19,7 @@ $(document).ready(function () {
             description: 'This sporty scrub top is so cool! It is loaded with personality with a "V" in front and the back. It also has geometric seam details that are genuinely original.',
             kind: 'solids',
             features: ['Double v-neck', 'Geometric seam details', 'Two angled welt pockets', 'R: XS-3X (27 1/4”)'],
-            swatches: ['ROYL', 'PWTR','PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
+            swatches: ['ROYL', 'PWTR', 'PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -45,8 +45,8 @@ $(document).ready(function () {
             collection: 'peaches',
             description: 'You will love the fit of these flat front pants. They have a simple structure and are fun to wear. You will want to wear them every day!',
             kind: 'bottoms',
-            features: ['Straight leg ', 'Two back pockets','Soft Elastic waistband','Outer waist ties', 'R: XS-3X (30”) P XS-2X (28”) T: XS-XL (32 1/2”)'],
-            swatches: ['ROYL', 'PWTR','PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
+            features: ['Straight leg ', 'Two back pockets', 'Soft Elastic waistband', 'Outer waist ties', 'R: XS-3X (30”) P XS-2X (28”) T: XS-XL (32 1/2”)'],
+            swatches: ['ROYL', 'PWTR', 'PKPH', 'NAVY', 'GELO', 'CLOD', 'BLAC'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -342,8 +342,8 @@ $(document).ready(function () {
             collection: 'touchclassic',
             description: "This classic scrub top is the perfect blend of classic style and comfort. This poly blend fabric is easy care and feels like cotton! ",
             kind: 'solids',
-            features: ['Classic silhouette','Two angled welt pockets','Chest pocket with bungee loop','Contrast back neckband','R: XS-3X (27")'],
-            swatches: ['BLAC', 'BLUH', 'INDH','NAVY','PWTR', 'ROYL', 'SLAT'],
+            features: ['Classic silhouette', 'Two angled welt pockets', 'Chest pocket with bungee loop', 'Contrast back neckband', 'R: XS-3X (27")'],
+            swatches: ['BLAC', 'BLUH', 'INDH', 'NAVY', 'PWTR', 'ROYL', 'SLAT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -370,7 +370,7 @@ $(document).ready(function () {
             description: "These scrub pants are the perfect blend of classic style and comfort. You'll love the waistband. Outer waist ties ensure a perfect fit! ",
             kind: 'bottoms',
             features: ['Straight leg', 'Super comfortable waistband', 'Outer waist ties', 'Single back pocket', 'R: XS-5X (30.5”) P XS-2X (28.5”) T XS-XL (33”)'],
-            swatches: ['BLAC', 'BLUH', 'INDH','NAVY','PWTR', 'ROYL', 'SLAT'],
+            swatches: ['BLAC', 'BLUH', 'INDH', 'NAVY', 'PWTR', 'ROYL', 'SLAT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -397,7 +397,7 @@ $(document).ready(function () {
             description: "This scrub top offers you a comfy and breathable fit. A v-neckline and a fun racerback design make for a classic sporty look.",
             kind: 'solids',
             features: ['Racerback knit panel', 'Front and back princess seams', 'Two large patch pockets', 'Welt accessory pocket', 'R: XS-5X (front 27” back 26”)'],
-            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM','PWNK', 'PWTR', 'REDD', 'ROYL', 'SAFR', 'TEAL','TFPK', 'TURQ', 'WINE', 'WHIT'],
+            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM', 'PWNK', 'PWTR', 'REDD', 'ROYL', 'SAFR', 'TEAL', 'TFPK', 'TURQ', 'WINE', 'WHIT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -426,7 +426,7 @@ $(document).ready(function () {
             description: "Designed for comfort and built to perform on the job and beyond! This yoga style scrub pant offers a comfortable drawstring waistband and two cargo pockets.",
             kind: 'bottoms',
             features: ['Boot cut leg with side vents', 'Sporty yoga knit waistband', 'Internal waist ties', 'Two welt cargo pockets', 'Two back patch pockets', 'R: XS-5X (31”) | P: XS-2X (29”) | T: XS-2X (33”)'],
-            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM', 'PWNK', 'PWTR', 'REDD', 'ROYL','SAFR', 'TEAL', 'TFPK','TURQ', 'WINE', 'WHIT'],
+            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM', 'PWNK', 'PWTR', 'REDD', 'ROYL', 'SAFR', 'TEAL', 'TFPK', 'TURQ', 'WINE', 'WHIT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -455,7 +455,7 @@ $(document).ready(function () {
             description: "This v-neck scrub top feels sporty while exhibiting a traditional appeal. Crafted from a sleek and lightweight fabric, includes a chest pocket for expanded storage.",
             kind: 'solids',
             features: ['Chest patch pocket', 'Two large welt pockets', 'R: XS-3X ( 26”)'],
-            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM','PWNK', 'PWTR', 'REDD', 'ROYL', 'SAFR','TEAL','TFPK', 'TURQ', 'WINE', 'WHIT'],
+            swatches: ['BLAC', 'CARI', 'CEIL', 'CHOC', 'CRAL', 'EGPL', 'GLXY', 'HNTR', 'NAVY', 'PLUM', 'PWNK', 'PWTR', 'REDD', 'ROYL', 'SAFR', 'TEAL', 'TFPK', 'TURQ', 'WINE', 'WHIT'],
             isActive: true,
             appendSwatches: function () {
                 for (let i = 0; i < this.swatches.length; i++) {
@@ -1731,7 +1731,7 @@ $(document).ready(function () {
             description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
             kind: 'prints',
             features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
-            swatches: ['NAVY','PKPH'],
+            swatches: ['NAVY', 'PKPH'],
             isActive: true,
             listFeatures: function () {
                 console.log(this.features)
@@ -1789,7 +1789,7 @@ $(document).ready(function () {
             description: 'Show off your style and come alive with seasonal prints. We work with top print designers to offer unique and genuinely custom scrub tops!',
             kind: 'prints',
             features: ['Seasonal prints', 'Perfect for layers', 'Super soft fabric', 'R: XS-3X ( 26”)'],
-            swatches: ['RLTL', 'ROYL','NAVY'],
+            swatches: ['RLTL', 'ROYL', 'NAVY'],
             isActive: true,
             listFeatures: function () {
                 console.log(this.features)
@@ -2281,7 +2281,7 @@ $(document).ready(function () {
 
     let generateCollectionsHtml = function () {
         for (let i = 0; i < styles.length; i++) {
-            if (style === styles[i].collection && styles[i].isActive){
+            if (style === styles[i].collection && styles[i].isActive) {
                 $('#collections-view').append(
                     `   <div class="col-md-3 col-sm-6 p-3 text-sofia text-blue text-uppercase">
                             <a href="../collections/items/${styles[i].style}.html"><img src="../assets/images/products/products/${styles[i].style}.jpg" 
@@ -2388,7 +2388,7 @@ $(document).ready(function () {
 
 
     let searchStyle = function (e) {
-        
+
         e.preventDefault();
         let input = $('#search').val().trim().toLowerCase();
         console.log(input)
@@ -2402,53 +2402,51 @@ $(document).ready(function () {
 
     }
 
-    let filterStyle = function (e){
+    let filterStyle = function (e) {
         e.preventDefault();
         console.log('i am clicked');
-        //on change the user will see the results 
-        //results will have index of style # or collection or kind
+        //on click the user will see the results 
+        //search have styles #, name, description
         let input = $('.search').val().trim().toLowerCase();
         let descriptionResults = styles.filter(e => e.isActive === true && e.description.indexOf(input) > -1);
-        let nameResults = styles.filter(e => e.isActive === true && e.name.indexOf(input) > -1);
-        let stylesResults = styles.filter(e => e.isActive === true && e.style.toString().indexOf(input) > -1);
-        let collectionResults = styles.filter(e => e.isActive === true && e.collection.indexOf(input) > -1);
-        let kindResults = styles.filter(e => e.isActive === true && e.kind.indexOf(input) > -1);
-        let results = [...descriptionResults,...nameResults,...stylesResults,...collectionResults,...kindResults];
+        let nameResults = styles.filter(e => e.isActive === true && e.name.toLowerCase().indexOf(input) > -1);
+        let stylesResults = styles.filter(e => e.isActive === true && e.style.toString().toLowerCase().indexOf(input) > -1);
+        let collectionResults = styles.filter(e => e.isActive === true && e.collection.toLowerCase().indexOf(input) > -1);
+        let kindResults = styles.filter(e => e.isActive === true && e.kind.toLowerCase().indexOf(input) > -1);
+        let results = [...nameResults,...descriptionResults, ...stylesResults, ...collectionResults, ...kindResults];
 
-       let $searchResults = $('.search-results');
-        
-       if (results.length > 0) {
+        let uniqueResults = results.filter((element,index,self) => index === self.findIndex((e)=>(e.style === element.style)));
+
+        let $searchResults = $('.search-results');
+
+        if (uniqueResults.length > 0) {
             $searchResults.css({
-                display:'block',
-                color:'#fff',
-                transition:'all .3s ease-in-out'
+                display: 'block',
+                color: '#fff',
+                transition: 'all .3s ease-in-out'
             })
-       } else {
-        $('#modal').modal('show');
-       }
-
-       $searchResults.empty();
-       for (let i = 0; i < results.length; i++) {
-        //    if (results[i].style === results[i].style){
-        //        results.splice(results[i],1)
-        //    }
-           $searchResults.append(
-           `<div class="col-lg-3 col-sm-6 p-3 text-sofia text-uppercase">
-            <a href="https://www.medcouture.com/collections/items/${results[i].style}.html"><img src="https://www.medcouture.com/assets/images/products/products/${results[i].style}.jpg" 
-            alt="${results[i].name}" class="img-fluid"></a>
-             ${results[i].style} <br> ${results[i].name}
+        } else {
+            $('#modal').modal('show');
+        }
+        $searchResults.empty();
+        for (let i = 0; i < uniqueResults.length; i++) {
+            $searchResults.append(
+                `<div class="col-lg-3 col-sm-6 p-3 text-sofia text-uppercase">
+            <a href="https://www.medcouture.com/collections/items/${uniqueResults[i].style}.html"><img src="https://www.medcouture.com/assets/images/products/products/${uniqueResults[i].style}.jpg" 
+            alt="${uniqueResults[i].name}" class="img-fluid"></a>
+             ${uniqueResults[i].style} <br> ${uniqueResults[i].name}
             </div>
            `);
-       }
+        }
     }
     $('.execute-search').on('click', filterStyle);
 
     let disableOverlay = function () {
-       let $searchResults = $('.search-results');
+        let $searchResults = $('.search-results');
         $searchResults.css({
-            display:'none',
-            color:'#fff',
-            transition:'all .3s '
+            display: 'none',
+            color: '#fff',
+            transition: 'all .3s '
         })
     }
     $('.overlay').on('click', disableOverlay);

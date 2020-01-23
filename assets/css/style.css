@@ -723,7 +723,9 @@ a:focus {
     transition: all .3s ease-in-out;
     overflow-y: scroll;
   }
-
+input[type='checkbox'] {
+    border-radius: 100%;
+}
   ::-webkit-input-placeholder {
     text-align: center;
  }
