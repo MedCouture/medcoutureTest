@@ -769,7 +769,7 @@ $(document).ready(function () {
         },
         {
             style: 8741,
-            name: 'V-NECK 3 POCKET TOP',
+            name: '2 CARGO POCKET PANT',
             collection: 'signature',
             description: 'This classic boot cut scrub pant is fun. Five spacious pockets and adjustable ties make for a stylish, functional pant that will fit perfectly with the rest of your wardrobe.',
             kind: 'bottoms',
@@ -2385,22 +2385,6 @@ $(document).ready(function () {
     }
 
     thumbnailImageChange();
-
-
-    let searchStyle = function (e) {
-
-        e.preventDefault();
-        let input = $('#search').val().trim().toLowerCase();
-        console.log(input)
-        const found = styles.find(e => e.style.toString() == input)
-        if (found) {
-            console.log(found);
-            window.location.replace(`http://www.medcouture.com/collections/items/${found.style}.html`)
-        } else {
-            $('#modal').modal('show')
-        };
-
-    }
 
     let filterStyle = function (e) {
         e.preventDefault();
