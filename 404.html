@@ -95,10 +95,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="https://dashboard.medcouture.com">LOGIN</a>
                     </li>
+                    <li>
+                        <form class="d-flex justify-content-center align-items-start ml-2">
+                            <input class="search" type="search" class="text-sofia" placeholder="Search Style">
+                            <button type="submit" class="execute-search"><i class="fas fa-search"></i></button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
+    <div class="overlay container-fluid">
+        <div class="row search-results">
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body text-center text-sofia">
+                    Style Not Found
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="col-md-12 h-100 d-flex justify-content-md-center align-items-center hidden-sm">

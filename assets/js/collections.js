@@ -2413,6 +2413,7 @@ $(document).ready(function () {
             $('#modal').modal('show');
         }
         $searchResults.empty();
+        
         for (let i = 0; i < uniqueResults.length; i++) {
             $searchResults.append(
                 `<div class="col-lg-3 col-sm-6 p-3 text-sofia text-uppercase">
@@ -2430,7 +2431,7 @@ $(document).ready(function () {
         $searchResults.css({
             display: 'none',
             color: '#fff',
-            transition: 'all .3s '
+            transition: 'all .3s ease-in-out'
         })
     }
     $('.overlay').on('click', disableOverlay);
