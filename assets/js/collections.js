@@ -2397,9 +2397,18 @@ $(document).ready(function () {
         let stylesResults = styles.filter(e => e.isActive === true && e.style.toString().toLowerCase().indexOf(input) > -1);
         let collectionResults = styles.filter(e => e.isActive === true && e.collection.toLowerCase().indexOf(input) > -1);
         let kindResults = styles.filter(e => e.isActive === true && e.kind.toLowerCase().indexOf(input) > -1);
-        let results = [...nameResults,...descriptionResults, ...stylesResults, ...collectionResults, ...kindResults];
+        let results = [...nameResults,...descriptionResults,...stylesResults,...collectionResults,...kindResults];
 
-        let uniqueResults = results.filter((element,index,self) => index === self.findIndex((e)=>(e.style === element.style)));
+        function removeDuplicity(datas) {
+            return datas.filter(function (item, index, arr) {
+              var c = arr.map(function (item) {
+                return item.style;
+              });
+              return index === c.indexOf(item.style);
+            });
+          }
+      
+          var uniqueResults = removeDuplicity(results);
 
         let $searchResults = $('.search-results');
 
