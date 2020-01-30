@@ -744,7 +744,7 @@ $(document).ready(function () {
             collection: 'signature',
             description: 'Ample storage space and a simple silhouette create an essential wardrobe piece with this scrub top. Perfect for layering and pairs nicely with any Signature pant.',
             kind: 'solids',
-            features: ['Classic v-neckline', 'Chest pocket with bungee loop', 'Two large patch pockets', 'Two back patch pockets', 'Extra pen slot accessory pocket', 'Embroidered logo on pocket band', 'R: XS-3X ( 26”)'],
+            features: ['Classic v-neckline', 'Chest pocket with bungee loop', 'Two large patch pockets', 'Extra pen slot accessory pocket', 'Embroidered logo on pocket band', 'R: XS-3X ( 26”)'],
             swatches: ['BLAC', 'CEIL', 'GLXY', 'NAVY', 'PKLC', 'PLUM', 'PWTR', 'REDD', 'ROYL', 'STEL', 'WHIT', 'WINE'],
             isActive: true,
             appendSwatches: function () {
