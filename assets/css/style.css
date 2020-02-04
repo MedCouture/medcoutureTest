@@ -723,23 +723,34 @@ a:focus {
     transition: all .3s ease-in-out;
     overflow-y: scroll;
   }
-input[type='checkbox'] {
-    border-radius: 100%;
+.form-control{
+    border-radius: 0%!important;
+    border:1px transparent!important;
+    text-align: start!important;
 }
-  ::-webkit-input-placeholder {
+
+  .search::-webkit-input-placeholder {
     text-align: center;
+    border-radius: 0;
+    border: 0;
  }
  
- :-moz-placeholder { /* Firefox 18- */
+ .search:-moz-placeholder { /* Firefox 18- */
+    text-align: center;
+    border-radius: 0;
+    border: 0;  
+ }
+ 
+ .search::-moz-placeholder {  /* Firefox 19+ */
     text-align: center;  
- }
+    border-radius: 0;
+    border: 0; 
+}
  
- ::-moz-placeholder {  /* Firefox 19+ */
-    text-align: center;  
- }
- 
- :-ms-input-placeholder {  
-    text-align: center; 
+ .search:-ms-input-placeholder {  
+    text-align: center;
+    border-radius: 0;
+    border: 0; 
  }
 /* End Color Swatches */
 

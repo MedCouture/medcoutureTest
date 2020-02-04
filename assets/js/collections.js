@@ -2239,8 +2239,8 @@ $(document).ready(function () {
                                                 alt="${styles[i].style}" class="img-fluid img-thumbnail thumbnails" data-orientation="front" onError=this.src="../../assets/images/products/products/blank.jpg"></div>
                                             <div class="col-sm-4"><img src="../../assets/images/products/products/${styles[i].style}_back.jpg"
                                             alt="${styles[i].style}" class="img-fluid img-thumbnail thumbnails" data-orientation="back" onError=this.src="../../assets/images/products/products/blank.jpg"></div>
-                                            <div class="col-sm-4"><img src="../../assets/images/products/products/${style}_sketch.jpg"
-                                            alt="${style}_sketch" class="img-fluid img-thumbnail thumbnails" data-orientation="sketch" onError=this.src="../../assets/images/products/products/blank.jpg"></div>
+                                            <div class="col-sm-4"><img src="../../assets/images/products/products/${styles[i].style}_sketch.jpg"
+                                            alt="${styles[i].style}_sketch" class="img-fluid img-thumbnail thumbnails" data-orientation="sketch" onError=this.src="../../assets/images/products/products/blank.jpg"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -2323,7 +2323,7 @@ $(document).ready(function () {
                 <div class="col-sm-4"><img src="../../assets/images/products/products/${style}.jpg"
                     alt="${style}" class="img-fluid img-thumbnail thumbnails" data-orientation="front" onError=this.src="../../assets/images/products/products/blank.jpg"></div>
                 <div class="col-sm-4"><img src="../../assets/images/products/products/${style}_back.jpg"
-                alt="${style}" class="img-fluid img-thumbnail thumbnails" data-orientation="back" onError=this.src="../../assets/images/products/products/blank.jpg"></div>
+                alt="${style}" class="img-fluid img-thumbnail thumbnails" data-orientation="back" data-color="${color} "onError=this.src="../../assets/images/products/products/blank.jpg"></div>
                 <div class="col-sm-4"><img src="../../assets/images/products/products/${style}_sketch.jpg"
                 alt="${style}_sketch" class="img-fluid img-thumbnail thumbnails" data-orientation="sketch" onError=this.src="../../assets/images/products/products/blank.jpg"></div>
             </div>
@@ -2334,9 +2334,12 @@ $(document).ready(function () {
 
     imageStyleColorChange();
 
+//THUMBNAIL CLICK IMAGE CHANGE BEGINS
     let thumbnailImageChange = function () {
         $('body').on('click', '.thumbnails', function () {
-
+            let styleObj = styles.filter(e => e.style.toString() === style);
+            console.log(style);
+            console.log(styleObj);
             let orientation = $(this).data('orientation');
             console.log(orientation);
             if (orientation === "front") {
@@ -2354,7 +2357,7 @@ $(document).ready(function () {
             `)
             } else if (orientation === "back") {
                 $('#style-showcase').html(`
-                <img src="../../assets/images/products/products/${style}_back.jpg" alt="${style}_back" class="img-fluid mb-2" onError=this.src="../../assets/images/products/products/blank.jpg">
+                <img src="../../assets/images/products/products/${style}_back.jpg" alt="${style.style}_back" class="img-fluid mb-2" onError=this.src="../../assets/images/products/products/blank.jpg">
                 <div class="container-fluid hidden-sm">
                 <div class="row">
                     <div class="col-sm-4"><img src="../../assets/images/products/products/${style}.jpg"
@@ -2385,7 +2388,9 @@ $(document).ready(function () {
     }
 
     thumbnailImageChange();
+//THUMBNAIL CLICK IMAGE CHANGE ENDS
 
+// SEARCH MODULE BEGINS
     let filterStyle = function (e) {
         e.preventDefault();
         console.log('i am clicked');
@@ -2444,8 +2449,63 @@ $(document).ready(function () {
         })
     }
     $('.overlay').on('click', disableOverlay);
+// SEARCH MODULE ENDS
 
+//EMAIL SIGNUP MODULE BEGINS
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyA14gkQW25noui4pNEsK9BJS40KTrlC-mg",
+        authDomain: "medcouturesignups.firebaseapp.com",
+        databaseURL: "https://medcouturesignups.firebaseio.com",
+        projectId: "medcouturesignups",
+        storageBucket: "medcouturesignups.appspot.com",
+        messagingSenderId: "113657167755",
+        appId: "1:113657167755:web:ca1cf80c21e9ac2be9398e",
+        measurementId: "G-5931PR1QBH"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+  
+  
+      $('.submit').on('click', createObject)
+  
+      function createObject(e) {
+        e.preventDefault();
+        var signup = [];
+        var email = $('.signup-email').val().trim();
+        var firstName = $('.signup-firstname').val().trim();
+        var lastName = $('.signup-lastname').val().trim();
+        var $message = $('.signup-message');
 
+       function validateEmail () {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+       }
+
+       if (validateEmail(email)){
+        var Obj = {
+            email: email,
+            firstName:firstName,
+            lastName:lastName
+          }
+          signup.push(Obj);
+          var database = firebase.database();
+          database.ref().push(Obj);
+          console.log(signup);
+          $message.html(`
+              Thank you for signing up!
+          `) 
+          $('.signup-email').val('');
+          $('.signup-firstname').val('');
+          $('.signup-lastname').val('');
+       } else {
+           $message.html(`
+            Please provide a valid email address.
+           `)
+       }
+
+      }
 
 
 
