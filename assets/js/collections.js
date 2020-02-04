@@ -2494,7 +2494,7 @@ $(document).ready(function () {
           database.ref().push(Obj);
           console.log(signup);
           $message.html(`
-              Thank you for signing up!
+            Thank you for signing up!
           `) 
           $('.signup-email').val('');
           $('.signup-firstname').val('');
