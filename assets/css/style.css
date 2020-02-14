@@ -756,6 +756,12 @@ a:focus {
     z-index: 9999;
   }
   
+.carousel-control-prev-icon {
+    background: url("assets/images/prev-icon.png")!important;
+}
+.carousel-control-next-icon {
+    background: url("assets/images/prev-icon.png")!important;
+}
 /* End Color Swatches */
 
 @media (max-width: 767px) {
