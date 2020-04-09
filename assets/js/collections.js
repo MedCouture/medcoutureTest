@@ -2320,7 +2320,7 @@ $(document).ready(function () {
             <img src="../../assets/images/products/products/${style}_${color}.jpg" alt="${style}_${color}" class="img-fluid showcased-style mb-2" data-style="${style}_${color}" onError=this.src="../../assets/images/products/products/blank.jpg">
             <div class="container-fluid hidden-sm">
             <div class="row">
-                <div class="col-sm-4"><img src="../../assets/images/products/products/${style}.jpg"
+                <div class="col-sm-4"><img src="../../assets/images/products/products/${style}_${color}.jpg"
                     alt="${style}" class="img-fluid img-thumbnail thumbnails" data-orientation="front" onError=this.src="../../assets/images/products/products/blank.jpg"></div>
                 <div class="col-sm-4"><img src="../../assets/images/products/products/${style}_back.jpg"
                 alt="${style}" class="img-fluid img-thumbnail thumbnails" data-orientation="back" data-color="${color} "onError=this.src="../../assets/images/products/products/blank.jpg"></div>
@@ -2335,11 +2335,11 @@ $(document).ready(function () {
     imageStyleColorChange();
 
 //THUMBNAIL CLICK IMAGE CHANGE BEGINS
+
     let thumbnailImageChange = function () {
         $('body').on('click', '.thumbnails', function () {
             let styleObj = styles.filter(e => e.style.toString() === style);
-            console.log(style);
-            console.log(styleObj);
+            console.log('StyleObj', styleObj)
             let orientation = $(this).data('orientation');
             console.log(orientation);
             if (orientation === "front") {
